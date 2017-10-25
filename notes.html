@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>notes</title>
+<!-- 2017-10-25 Mer 20:20 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="yfe" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Course Learning Objectives</a></li>
+<li><a href="#sec-2">2. Hyperledger</a></li>
+<li><a href="#sec-3">3. The Linux Foundation</a></li>
+<li><a href="#sec-4">4. Chapter 1. Discovering Blockchain Technologies</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Distributed Ledger Technology (DLT)</a>
+<ul>
+<li><a href="#sec-4-1-1">4.1.1. Background - The Rising Interest in Distributed Ledger Technologies</a></li>
+<li><a href="#sec-4-1-2">4.1.2. Distributed Ledger Technology (DLT)</a></li>
+<li><a href="#sec-4-1-3">4.1.3. Blockchains</a></li>
+<li><a href="#sec-4-1-4">4.1.4. Merkle Tree</a></li>
+<li><a href="#sec-4-1-5">4.1.5. Transactions</a></li>
+<li><a href="#sec-4-1-6">4.1.6. Differences between Blockchains and Databases</a></li>
+<li><a href="#sec-4-1-7">4.1.7. Types of Blockchains</a></li>
+<li><a href="#sec-4-1-8">4.1.8. Peer-to-Peer Network Architecture</a></li>
+<li><a href="#sec-4-1-9">4.1.9. Immutability of Data</a></li>
+<li><a href="#sec-4-1-10">4.1.10. Blockchain Applications</a></li>
+<li><a href="#sec-4-1-11">4.1.11. Smart Contracts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Course Learning Objectives</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+By taking this course, you will be able to:
+</p>
+
+<ul class="org-ul">
+<li>Describe Business Blockchain and Distributed Ledger Technologies.
+</li>
+<li>Gain familiarity with current Hyperledger projects and cross-industry use cases.
+</li>
+<li>Perform clean installations of the Hyperledger Sawtooth and Hyperledger Fabric frameworks.
+</li>
+<li>Explore a sample use case/application in the context of the Hyperledger Sawtooth and Hyperledger Fabric frameworks.
+</li>
+<li>Build simple applications on top of Hyperledger Sawtooth and Hyperledger Fabric.
+</li>
+<li>Become involved in and contribute to the open source Hyperledger projects.
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Hyperledger</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Hyperledger is the umbrella open source project that The Linux Foundation has created and hosted since 2015. It aims at advancing and promoting cross-industry blockchain technologies to ensure accountability, transparency, and trust among business partners. As a result, Hyperledger makes business network and transactions more efficient.
+</p>
+
+<p>
+These benefits are valued by leaders across many industries, including technology, finance, healthcare, supply chain, and automotive, among several others.
+</p>
+
+<p>
+Hyperledger offers different blockchain platforms. This course will present three of them: Iroha, Sawtooth, and Fabric.
+</p>
+
+<p>
+To learn more about the Hyperledger, <a href="https://www.hyperledger.org/">click here</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> The Linux Foundation</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+The Linux Foundation partners with the world's leading developers and companies to solve the hardest technology problems and accelerate open technology development and commercial adoption. The Linux Foundation makes it its mission to provide experience and expertise to any initiative working to solve complex problems through open source collaboration, providing the tools to scale open source projects: security best practices, governance, operations and ecosystem development, training and certification, licensing, and promotion.
+</p>
+
+<p>
+Linux is the world's largest and most pervasive open source software project in history. The Linux Foundation is home to Linux creator Linus Torvalds and lead maintainer Greg Kroah-Hartman, and provides a neutral home where Linux kernel development can be protected and accelerated for years to come. The success of Linux has catalyzed growth in the open source community, demonstrating the commercial efficacy of open source and inspiring countless new projects across all industries and levels of the technology stack.
+</p>
+
+<p>
+The Linux Foundation's work today extends far beyond Linux, fostering innovation at every layer of the software stack. The Linux Foundation is the umbrella organization for many critical open source projects that power corporations today, spanning all industry sectors:
+</p>
+
+<ul class="org-ul">
+<li>Big data and analytics: ODPi, R Consortium
+</li>
+<li>Networking: OpenDaylight, OPNFV
+</li>
+<li>Embedded: Dronecode, Zephyr
+</li>
+<li>Web tools: JS Foundation, Node.js
+</li>
+<li>Cloud computing: Cloud Foundry, Cloud Native Computing Foundation, Open Container Initiative
+</li>
+<li>Automotive: Automotive Grade Linux
+</li>
+<li>Security: The Core Infrastructure Initiative
+</li>
+<li>Blockchain: Hyperledger
+</li>
+<li>And many more.
+</li>
+</ul>
+
+<p>
+To learn more about The Linux Foundation, <a href="https://www.linuxfoundation.org/">click here</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Chapter 1. Discovering Blockchain Technologies</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+By the end of this chapter you should be able to:
+</p>
+
+<ul class="org-ul">
+<li>Discuss blockchain and distributed ledger technologies (DLT).
+</li>
+<li>Explore permissioned and permissionless blockchains and their key characteristics.
+</li>
+<li>Discuss various components of distributed ledger technologies, including consensus algorithms and smart contracts.
+</li>
+<li>Provide a high-level explanation of what Hyperledger is.
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Distributed Ledger Technology (DLT)</h3>
+<div class="outline-text-3" id="text-4-1">
+</div><div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> Background - The Rising Interest in Distributed Ledger Technologies</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+Looking back to the last half century of computer technologies and architectures, one may observe a trend of fluctuation between the centralization and subsequent decentralization of computing power, storage, infrastructure, protocols, and code.
+</p>
+
+<p>
+Mainframe computers are largely centralized. They typically house all computing power, memory, data storage, and code. Access to mainframes is mainly by 'dumb terminals', which only take inputs and outputs, and do not store or process data.
+</p>
+
+<p>
+With the advent of personal computers and private networks, similar computational capabilities were now housed both on the clients, as well as the servers. This, in part, gave rise to the 'client-server' architecture, which supported the development of relational database systems. Massive data sets, which are housed on mainframes, could move onto a distributed architecture. This data could replicate from server to server, and subsets of the data could be accessed and processed on clients, and then, synced back to the server.
+</p>
+
+<p>
+Over time, Internet and cloud computing architectures enabled global access from a variety of computing devices; whereas mainframes were largely designed to address the needs of large corporations and governments. Even though this 'cloud architecture' is decentralized in terms of hardware, it has given rise to application-level centralization (e.g. Facebook, Twitter, Google, etc).
+</p>
+
+<p>
+Currently, we are witnessing the transition from centralized computing, storage, and processing to decentralized architectures and systems. According to <a href="https://medium.com/@muneeb/the-next-wave-of-computing-743295b4bc73">Muneeb Ali</a>, these systems aim to
+</p>
+
+<blockquote>
+<p>
+"give explicit control of digital assets to end-users and remove the need to trust any third-party servers and infrastructure".
+</p>
+</blockquote>
+
+
+<p>
+Distributed ledger technology is one of the key innovations making this shift possible.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2"><span class="section-number-4">4.1.2</span> Distributed Ledger Technology (DLT)</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+A <b>distributed ledger</b> is a type of data structure which resides across multiple computer devices, generally spread across locations or regions.
+</p>
+
+<p>
+<b>Distributed Ledger Technology</b> includes blockchain technologies and smart contracts. While distributed ledgers existed prior to Bitcoin, the Bitcoin blockchain marks the convergence of a host of technologies, including timestamping of transactions, Peer-to-Peer (P2P) networks, cryptography, and shared computational power, along with a new consensus algorithm. 
+</p>
+
+<p>
+In summary, distributed ledger technology generally consists of <a href="https://intelledger.github.io/introduction.html">three basic components</a>:
+</p>
+
+<ul class="org-ul">
+<li>A <b>data model</b> that captures the current state of the ledger
+</li>
+<li>A <b>language of transactions</b> that changes the ledger state
+</li>
+<li>A <b>protocol</b> used to build consensus among participants around which transactions will be accepted, and in what order, by the ledger.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-3" class="outline-4">
+<h4 id="sec-4-1-3"><span class="section-number-4">4.1.3</span> Blockchains</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+According to <a href="https://hyperledger.org/about">hyperledger.org</a>,
+</p>
+
+<blockquote>
+<p>
+"A blockchain is a peer-to-peer distributed ledger forged by consensus, combined with a system for "smart contracts" and other assistive technologies."
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li><b>Smart contracts</b> are simply computer programs that execute predefined actions when certain conditions within the system are met.
+</li>
+
+<li><b>Consensus</b> refers to a system of ensuring that parties agree to a certain state of the system as the true state.
+</li>
+</ul>
+
+<p>
+<b>Blockchain</b> is a specific form or subset of distributed ledger technologies, which constructs a chronological chain of <b>blocks</b>, hence the name 'block-chain'. A block refers to a set of transactions that
+ are bundled together and added to the chain at the same time. In the Bitcoin blockchain, the miner nodes bundle unconfirmed and valid transactions into a block. 
+Each block contains a given number of transactions. In the Bitcoin network, miners must solve a cryptographic challenge to propose the next block. This process is
+ known as '<b>proof of work</b>', and requires significant computing power. We shall discuss proof of work in more detail in the Consensus Algorithms section. For a brief history of blockchain technology, please <a href="https://hbr.org/2017/02/a-brief-history-of-blockchain">click here</a>.
+</p>
+
+<p>
+<b>Timestamping</b> is another key feature of blockchain technology. Each block is timestamped, with each new block referring to the previous block. Combined with <b>cryptographic hashes</b>, this timestamped chain of blocks provides an immutable record of all transactions in the network, from the very first (or genesis) block.
+</p>
+
+<p>
+A block commonly consists of four pieces of metadata:
+</p>
+
+<ul class="org-ul">
+<li>The reference to the previous block
+</li>
+<li>The proof of work, also known as a nonce
+</li>
+<li>The timestamp
+</li>
+<li>The Merkle tree root for the transactions included in this block.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-4" class="outline-4">
+<h4 id="sec-4-1-4"><span class="section-number-4">4.1.4</span> Merkle Tree</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<p>
+The Merkle tree, also known as a binary hash tree, is a data structure that is used to store hashes of the individual data in large datasets in a way to make the verification of the dataset efficient. 
+It is an <b>anti-tamper mechanism</b> to ensure that the large dataset has not been changed. The word 'tree' is used to refer to a branching data structure in computer science, as seen in the image below. 
+According to Andreas M. Antonopoulos, in the Bitcoin protocol,
+</p>
+
+<blockquote>
+<p>
+"Merkle trees are used to summarize all the transactions in a block, producing an overall digital fingerprint of the entire set of transactions, providing a very efficient process to verify whether a transaction is included in a block."
+</p>
+</blockquote>
+
+
+
+<div id="fig:bitcoin_block_data" class="figure">
+<p><img src="img/Bitcoin_Block_Data.png" alt="Bitcoin_Block_Data.png" />
+</p>
+<p><span class="figure-number">Figure 1:</span> Bitcoin Block Data (licensed under Creative Commons Attribution-Share-Alike 3.0 Unported, retrieved from Wikipedia)</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-5" class="outline-4">
+<h4 id="sec-4-1-5"><span class="section-number-4">4.1.5</span> Transactions</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<p>
+The record of an event, cryptographically secured with a digital signature, that is verified, ordered, and bundled together into blocks, 
+form the <b>transactions</b> in the blockchain. In the Bitcoin blockchain, transactions involve the transfer of bitcoins, while in other blockchains,
+transactions may involve the transfer of any asset or a record of some service being rendered. Furthermore, a smart contract
+within the blockchain may allow automatic execution of transactions upon meeting predefined criteria.
+</p>
+
+
+<p>
+<b>Cryptography</b> has a key role to play both in the security, as well as in the immutability of the transactions
+ recorded on blockchains. Cryptography is the study of the techniques used to allow secure communication between different parties and to
+ ensure the authenticity and immutability of the data being communicated. For blockchain technologies, cryptography is used to prove that a
+ transaction was created by the right person. It is also used to link transactions into a block in a tamper-proof way, as well as create the links between blocks, to form a blockchain.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-6" class="outline-4">
+<h4 id="sec-4-1-6"><span class="section-number-4">4.1.6</span> Differences between Blockchains and Databases</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<p>
+Blockchain technology has some key differentiators from databases. 
+</p>
+
+<p>
+A blockchain is a write-only data structure, where new entries get appended onto the end of the ledger. Every
+ new block gets appended to the block chain by linking to the previous block's 'hash'.
+ There are no administrator permissions within a blockchain that allow editing or deleting of data.
+</p>
+
+<p>
+In a relational database, data can be easily modified or deleted. Typically, there are database administrators who may make changes
+ to any part of the data and/or its structure. Additionally, blockchains were designed for decentralized applications, whereas relational databases
+, in general, were originally designed for centralized applications, where a single entity controls the data.
+</p>
+
+
+
+<div id="fig:Centralized_Databases_vs_Blockchain" class="figure">
+<p><img src="img/Centralized_Databases_vs_Blockchain.png" alt="Centralized_Databases_vs_Blockchain.png" />
+</p>
+<p><span class="figure-number">Figure 2:</span> Blockchains VS Databases</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-7" class="outline-4">
+<h4 id="sec-4-1-7"><span class="section-number-4">4.1.7</span> Types of Blockchains</h4>
+<div class="outline-text-4" id="text-4-1-7">
+<p>
+A blockchain can be both <b>permissionless</b> (like Bitcoin or Ethereum) or <b>permissioned</b> (like the different Hyperledger blockchain frameworks). A permissionless
+ blockchain is also known as a public blockchain, because anyone can join the network. A permissioned blockchain, or private blockchain
+, requires pre-verification of the participating parties within the network, and these parties are usually known to each other.
+</p>
+
+<p>
+The choice between permissionless versus permissioned blockchains should be driven by the particular application at hand (or use case). Most
+ enterprise use cases involve extensive vetting before parties agree to do business with each other. An example where a number
+ of businesses exchange information is the supply chain management. The supply chain management is an ideal use case for permissioned
+ blockchains. You would not want non-vetted companies participating in the network. Each participant that is involved in the supply
+ chain would require permissions to execute transactions on the blockchain. These transactions would allow other companies to understand where in
+ the supply chain a particular item is. 
+</p>
+
+<p>
+On the contrary, when a network can 'commoditize' trust, facilitating parties to transact without necessarily having to verify each other's
+ identity, like the Bitcoin blockchain, a permissionless blockchain is more suitable. Many of these instances involve the sale or distribution
+ to the public. Cryptocurrencies and Initial Coin Offerings (which are not backed by national governments) usually involve implementations of permissionless blockchains.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-8" class="outline-4">
+<h4 id="sec-4-1-8"><span class="section-number-4">4.1.8</span> Peer-to-Peer Network Architecture</h4>
+<div class="outline-text-4" id="text-4-1-8">
+<p>
+Historically, most applications utilize a central server (or servers). For one user/client to send a message to another user/client
+ in the network, the request has to be sent to the hub or a central server, which then directs it to the right computer.
+</p>
+
+<p>
+<b>Peer-to-peer</b> (P2P) networks were first made popular by Napster (and later BitTorrent) and consist of computer systems which
+ are directly connected to each other via the Internet, without a central server. Peers contribute to the computing power and
+ storage that is required for the upkeep of the network. P2P networks are generally considered to be more secure than
+ centralized networks, as they do not have a single point of attack, as in the case of a server-based
+ network, where the security of the entire network can be compromised if the central server is successfully attacked. As a
+ result, large corporations invest significant amounts of financial resources to fortify their central servers, and yet, a total cost of
+ $445 billion to the global economy in cyberspace crimes was estimated by the World Economic Forum's <a href="https://www.weforum.org/reports/the-global-risks-report-2016">2016 Global Risk Report</a>.
+</p>
+
+<p>
+Permissionless P2P systems do not require a set amount of peers to be online and are generally slower. Permissioned P2P
+ networks have to guarantee uptime and require a high level of quality of service on the communication links.
+</p>
+
+
+
+<div id="fig:Network_Architectures" class="figure">
+<p><img src="img/Network_Architectures.png" alt="Network_Architectures.png" />
+</p>
+<p><span class="figure-number">Figure 3:</span> Network Architectures</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-1-9" class="outline-4">
+<h4 id="sec-4-1-9"><span class="section-number-4">4.1.9</span> Immutability of Data</h4>
+<div class="outline-text-4" id="text-4-1-9">
+<p>
+The immutability of the data which sits on the blockchain is perhaps the most powerful and convincing reason to deploy
+ blockchain-based solutions for a variety of socio-economic processes which are currently recorded on centralized servers. This <b>immutability</b>, or '<b>unchanging over time</b>' feature
+ makes the blockchain useful for accounting, financial transactions, identity management, and asset ownership, management and transfer, just
+ to name a few examples. Once a transaction is written onto the blockchain, no one can change it, or, at least, it would be extremely difficult to change it.
+</p>
+
+<p>
+According to <a href="https://www.linkedin.com/pulse/gentle-introduction-immutability-blockchains-antony-lewis/">Antony Lewis</a>, the Director of Research at R3, 
+</p>
+
+<blockquote>
+<p>
+"When people say that blockchains are immutable, they don't mean that the data can't be changed, they mean it is extremely hard to change without collusion, and if you try, it's extremely easy to detect the attempt."
+</p>
+</blockquote>
+
+<p>
+Let's dig into this statement a bit further. It is extremely hard to change the transactions in a blockchain, because
+ each block is linked to the previous block by including the previous block's hash. This hash includes the Merkle root
+ hash of all the transactions in the previous block. If a single transaction were to change, not only would the
+ Merkle root hash change, but so too would the hash contained in the changed block. In addition, each subsequent block
+ would need to be updated to reflect this change. In the case of proof of work, the amount of energy
+ required to recalculate the nonce for this block and each subsequent block would be prohibitive. On the other hand, if
+ someone did modify a transaction in a block without going through the necessary steps to update the subsequent blocks, it
+ would be easy to recalculate the hashes used in the blocks and determine that something is amiss.
+</p>
+
+<p>
+Let's look at an example of how this works. In the following diagram, we see the original blocks and the
+ transactions for Block 11. Specifically, we see that the Merkle root for the transactions in Block 11 is <b>Hash #ABCD</b>, which
+ is the combined hash for the four transactions in this block. Now, let's say that someone comes in and attempts
+ to change Transaction A to Transaction A'. This, in turn, modifies the hashes that are stored in the Merkle tree, and the Merkle root changes to <b>Hash #A'BCD</b>.
+ In addition, the Previous Block hash stored in Block 12 also needs to be modified to reflect the overall change in the hash for Block 11.
+</p>
+
+
+
+<div id="fig:BLOCKCHAIN_IMMUTABILITY" class="figure">
+<p><img src="img/BLOCKCHAIN_IMMUTABILITY.png" alt="BLOCKCHAIN_IMMUTABILITY.png" />
+</p>
+<p><span class="figure-number">Figure 4:</span> Blockchain Immutability</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-4-1-10" class="outline-4">
+<h4 id="sec-4-1-10"><span class="section-number-4">4.1.10</span> Blockchain Applications</h4>
+<div class="outline-text-4" id="text-4-1-10">
+<p>
+Since blockchain is a new form of digital infrastructure, applications built on top of a blockchain provide a gateway to
+ accessing information that sits on that blockchain. In other words, clients/users interact with the blockchain through applications. Starting from
+ the simple wallets that hold bitcoins, sophisticated applications which encompass applications addressing digital identity (e.g. UPort, KYC-Chain, Netki, etc.), and
+ complex financial transactions are being built on the blockchain.
+</p>
+
+<p>
+A more exhaustive list of companies using blockchain technology for identity management and authentication can be found <a href="https://letstalkpayments.com/22-companies-leveraging-blockchain-for-identity-management-and-authentication/">here</a>.
+</p>
+
+<p>
+For more details about blockchain applications, you can refer to Daniel Palmer's article at <a href="https://www.coindesk.com/7-cool-decentralized-apps-built-ethereum/">coindesk.com</a>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-1-11" class="outline-4">
+<h4 id="sec-4-1-11"><span class="section-number-4">4.1.11</span> Smart Contracts</h4>
+<div class="outline-text-4" id="text-4-1-11">
+<p>
+<b>Smart contracts</b> are simply computer programs that execute predefined actions when certain conditions within the system are met. Smart contracts
+ provide the <b>language of transactions</b> that allow the ledger state to be modified. They can facilitate the exchange and transfer
+ of anything of value (e.g. shares, money, content, property).
+</p>
+
+
+
+<div id="fig:Blockchain_and_Smar_Contracts_-_Flow_Diagram" class="figure">
+<p><img src="img/Blockchain_and_Smar_Contracts_-_Flow_Diagram.png" alt="Blockchain_and_Smar_Contracts_-_Flow_Diagram.png" />
+</p>
+<p><span class="figure-number">Figure 5:</span> Blockchain and Smart Contracts - Flow<sub>Diagram</sub></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: yfe</p>
+<p class="date">Created: 2017-10-25 Mer 20:20</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
