@@ -251,3 +251,98 @@ For more details about blockchain applications, you can refer to Daniel Palmer's
      [[file:img/Blockchain_and_Smar_Contracts_-_Flow_Diagram.png]]
 
 
+*** Bitcoin - A Popular Blockchain Deployment
+
+With the invention of the peer-to-peer (P2P) cash system known as Bitcoin in 2008, we have an example
+ of a global decentralized payment network with a distributed and publicly-owned infrastructure, operating as a 'permissionless' system. There is
+ a persuasive case that Bitcoin is the first 'killer application' of decentralized computing. One can send and receive bitcoins anywhere
+ in the world in a completely P2P manner, without having to intermediate through a trusted third party, such as a bank.
+
+
+
+According to the [[https://coinmarketcap.com/currencies/bitcoin/][Coin Market Capitalizations]] website, as of October 2017, bitcoin's market capitalization (market cap) was nearly $100 billion. 
+
+
+ #+CAPTION: Bitcoin Charts (Source: [[https://coinmarketcap.com/currencies/bitcoin/]])
+     #+NAME:   fig:Market_Cap
+     [[file:img/Market_Cap.png]]
+
+
+According to [[https://angel.co/blockchains][AngelList]], more than one thousand startups have been created to leverage Bitcoin and blockchain-related technologies since the
+ inception of the Bitcoin payment system. Hundreds of large companies, and dozens of governments and universities have become actively involved
+ in researching, testing, and prototyping blockchain protocols, platforms, and applications. In particular, the financial services sector has been actively investing
+ in exploring wider applications of distributed ledger technologies (of which, blockchain is a subset) since late 2015.
+
+*** Bitcoin and Cryptoeconomics
+
+Bitcoin has also ushered in tremendous academic and research interest in the area of Cryptoeconomics and Cryptoeconomic security.
+
+According to [[https://www.youtube.com/watch?v%3DpKqdjaH1dRo][Vitalik Buterin]],
+
+#+BEGIN_QUOTE
+"Cryptoeconomics is about building systems that have certain desired properties using cryptography to prove properties about messages that happened in
+ the past while using economic incentives defined inside the system to encourage desired properties to hold into the future."
+#+END_QUOTE
+
+
+In other words, the field of Cryptoeconomics explores the intersection of cryptography and economic incentives. While cryptography is used for
+ ensuring network security at various levels and functions, the built-in economic incentives provided to the participating nodes in the
+ network ensures that, at any given point, the majority of players in the network operate in a desirable way.
+
+
+Rather than imposing barriers to entry, permissionless blockchains are public and open for anyone to join. Since such networks can
+ reasonably expect all kind of agents - including malicious actors - the key lies in incentivizing good behavior in a critical majority of the network, such that:
+
+
+- The malicious actors cannot take over the network through an *escalated attack*.
+- The malicious actors cannot *collude* to undertake an organized majority attack on the network.
+- The *payoffs* of securing the network are consistently higher than the cost of attacking the network.
+- The *cost* of attacking the network is prohibitively high.
+
+You can find more about Cryptoeceonomics [[https://medium.com/@cryptoeconomics/the-blockchain-economy-a-beginners-guide-to-institutional-cryptoeconomics-64bf2f2beec4][here]].
+
+*** Ethereum - An Alternative to Bitcoin
+
+
+According to [[http://ethdocs.org/en/latest/introduction/what-is-ethereum.html][Ethereum's official documentation]],
+
+#+BEGIN_QUOTE
+"Ethereum is an open blockchain platform that lets anyone build and use *decentralized applications* that run on blockchain technology".
+#+END_QUOTE
+
+
+The Ethereum blockchain platform facilitates *scripting functionality*, or '*smart contracts*', which are run through the nodes in the network. As
+ a result, unlike the Bitcoin blockchain, it does not just track transactions, it also programs them. Technically, Ethereum is a
+ Turing-complete virtual machine with its native cryptocurrency called 'ether'. The platform was proposed in 2013 in a white paper by the then 19-year old Vitalik Buterin.
+
+As of October 2017, Ethereum had a [[https://coinmarketcap.com/currencies/ethereum/][market cap]] of over $28 billion, making ether the second most valuable cryptocurrency after Bitcoin. 
+
+
+ #+CAPTION: Ether Historical Market Capitalization Chart (Source: https://etherscan.io/chart/marketcap)
+     #+NAME:   fig:Ether_Market_Cap
+     [[file:img/Ether_Market_Cap.jpg]]
+
+
+As the second best known public blockchain after the Bitcoin blockchain, Ethereum has ushered in an era of unprecedented activity around blockchain and distributed ledger technology.
+
+In addition to the Ethereum public blockchain, there are numerous versions of Ethereum which are designed to be private and are permissioned.
+
+*** Dapps
+
+As [[https://www.youtube.com/watch?v%3DClw-qf1sUZg][Stephan Tual]] explains, Ethereum applications do not have a middleman; instead, users interact in a P2P fashion with other
+ users through a variety of interfaces - social, financial, gaming, etc. Since the applications are developed on the decentralized consensus-based
+ network itself, third-party censorship is virtually impossible. Malicious actors cannot secretly tamper with the application by changing the code
+ and compromise all application users (or nodes that are actively interacting with it). These /Decentralized Applications/ have come to be known as *Dapps*.
+
+Since they are cryptographically secured, Dapps are referred to as 'secure applications'. Some of the [[http://www.ethdocs.org/en/latest/introduction/web3.html][high profile Dapps]] built on the Ethereum platform include:
+
+
+- *Augur*, which is a Decentralized Prediction Market. Learn more at https://augur.net/.
+- *Digix*, which tokenizes gold on Ethereum. Learn more at: https://digix.global/.
+- *Maker*, which is a Decentralized Autonomous Organization (DAO). Learn more at: https://makerdao.com/.
+
+The Ethereum network is a distributed global public network, which means it is not run on central servers in a
+ certain geographical location. Instead, the computing power that runs the network is contributed by nodes that are spread across the
+ globe. In other words, Dapps have 'zero downtime' - they never go down and, in general, cannot be switched off.
+
+
