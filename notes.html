@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>notes</title>
-<!-- 2017-10-28 Sam 23:13 -->
+<!-- 2017-10-28 Sam 23:47 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="yfe" />
@@ -183,7 +183,28 @@ for the JavaScript code in this tag.
 <li><a href="#sec-4-8">4.8. Simplified Byzantine Fault Tolerance (SBFT)</a></li>
 <li><a href="#sec-4-9">4.9. Proof of Authority (PoA)</a></li>
 <li><a href="#sec-4-10">4.10. Comparing Permissioned Consensus Approaches and Standard PoW</a></li>
-<li><a href="#sec-4-11">4.11. Hyperledger</a></li>
+<li><a href="#sec-4-11">4.11. Hyperledger</a>
+<ul>
+<li><a href="#sec-4-11-1">4.11.1. Hyperledger Blockchains: Permissioned or Permissionless?</a></li>
+<li><a href="#sec-4-11-2">4.11.2. Advantages of Using a Permissioned Blockchain over a Permissionless Blockchain</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-12">4.12. Other Open Source Permissioned Distributed Ledgers</a>
+<ul>
+<li><a href="#sec-4-12-1">4.12.1. Chain Core</a></li>
+<li><a href="#sec-4-12-2">4.12.2. Corda</a></li>
+<li><a href="#sec-4-12-3">4.12.3. Quorum</a></li>
+<li><a href="#sec-4-12-4">4.12.4. IOTA</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-13">4.13. Challenges in the Adoption/Deployment of Distributed Ledger Technologies</a>
+<ul>
+<li><a href="#sec-4-13-1">4.13.1. Standards</a></li>
+<li><a href="#sec-4-13-2">4.13.2. Regulation</a></li>
+<li><a href="#sec-4-13-3">4.13.3. Lack of Know-How</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-14">4.14. Conclusion</a></li>
 </ul>
 </li>
 </ul>
@@ -1051,12 +1072,257 @@ The following table offers an at-a-glance view of the main considerations and pr
 
 <div id="outline-container-sec-4-11" class="outline-3">
 <h3 id="sec-4-11"><span class="section-number-3">4.11</span> Hyperledger</h3>
+<div class="outline-text-3" id="text-4-11">
+<p>
+Hyperledger is an open source effort created to advance cross-industry blockchain technologies. Hosted by The Linux Foundation, it is
+ a global collaboration of members from various industries and organizations. Hyperledger boasts a host of enterprise-ready solutions. Hyperledger is
+ about communities of software developers building blockchain frameworks and platforms. We will take a closer look at some of the
+ current Hyperledger projects in the coming chapters.
+</p>
+</div>
+
+<div id="outline-container-sec-4-11-1" class="outline-4">
+<h4 id="sec-4-11-1"><span class="section-number-4">4.11.1</span> Hyperledger Blockchains: Permissioned or Permissionless?</h4>
+<div class="outline-text-4" id="text-4-11-1">
+<p>
+Hyperledger blockchains are generally permissioned blockchains, which means that the parties that join the network are authenticated and authorized to
+ participate on the network. Hyperledger’s main goal is to create enterprise grade, open source, distributed ledger frameworks and code
+ bases to support business use cases.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-11-2" class="outline-4">
+<h4 id="sec-4-11-2"><span class="section-number-4">4.11.2</span> Advantages of Using a Permissioned Blockchain over a Permissionless Blockchain</h4>
+<div class="outline-text-4" id="text-4-11-2">
+<p>
+If you look at permissionless blockchains, like the Bitcoin blockchain or the Ethereum blockchain, anyone can join the network, as
+ well as write and read transactions. The actors in the system are not known, which means there could be some
+ malicious actors within the network.
+</p>
+
+<p>
+Hyperledger reduces these security risks and ensures that only the parties that want to transact are the ones that are
+ part of the transaction and, rather than displaying the record of the transactions to the whole network, they remain visible
+ only to the parties involved. So, Hyperledger provides all the capabilities of the blockchain architecture - data privacy, information sharing, immutability
+, with a full stack of security protocols - all for the enterprise.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-12" class="outline-3">
+<h3 id="sec-4-12"><span class="section-number-3">4.12</span> Other Open Source Permissioned Distributed Ledgers</h3>
+<div class="outline-text-3" id="text-4-12">
+</div><div id="outline-container-sec-4-12-1" class="outline-4">
+<h4 id="sec-4-12-1"><span class="section-number-4">4.12.1</span> Chain Core</h4>
+<div class="outline-text-4" id="text-4-12-1">
+<p>
+Chain Core is an enterprise permissioned blockchain system that is mostly focused on financial services, like currencies, securities, derivatives, gift
+ cards, and loyalty points. The company partners with clients to launch and operate a network under the client's brand. Thanks
+ to its strategic partnerships with companies such as Capital One, Citigroup, Fiserv, Nasdaq, Orange, Visa, etc., the company raised over $40 million in funding since 2014.
+</p>
+
+<p>
+Within the Chain Core network, the creation and transfer of assets is decentralized. However, as stated in the <a href="https://www.kudelskisecurity.com/sites/default/files/files/kudelski_Security_blockchain_20161213.pdf">2016 Kudelski Security report</a>,
+</p>
+
+
+<blockquote>
+<p>
+"the operation of the network is governed by a designated set of entities known as a federation".
+</p>
+</blockquote>
+
+
+<p>
+The platform features the Chain Testnet, which allows decentralized application development on Chain Core, operated by Chain, Microsoft, and the Initiative for Cryptocurrencies and Contracts (IC3).
+</p>
+
+<p>
+For more information, please refer to <a href="https://chain.com/technology/">https://chain.com/technology/</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-12-2" class="outline-4">
+<h4 id="sec-4-12-2"><span class="section-number-4">4.12.2</span> Corda</h4>
+<div class="outline-text-4" id="text-4-12-2">
+<p>
+As of September 2017, R3 is a consortium of over one hundred large global financial institutions, that seeks to leverage
+ distributed ledger technologies to record, manage, and automate legal agreements between businesses through its software solution, called Corda.
+</p>
+
+<p>
+Corda is a distributed ledger platform, which features a blockchain-style P2P network; however, it is not a blockchain platform
+. Unlike blockchains, which involve global availability of data across the network and third party validators, Corda only allows information access
+ and validation functions to parties actually involved in the transaction. Featuring a different software architecture, "Corda achieves consensus between firms
+ at the level of individual deals, not the level of the system" (<a href="http://www.r3cev.com/blog/2016/4/4/introducing-r3-corda-a-distributed-ledger-designed-for-financial-services">Richard Gendal Brown</a>, 2016), while supporting a variety of consensus mechanisms.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-12-3" class="outline-4">
+<h4 id="sec-4-12-3"><span class="section-number-4">4.12.3</span> Quorum</h4>
+<div class="outline-text-4" id="text-4-12-3">
+<p>
+Created by JPMorgan, Quorum is, in fact, a fork of the Ethereum public blockchain, which uses a voting-based consensus
+ algorithm to facilitate an enterprise-focused distributed ledger and smart contract platform. Data privacy is achieved within the network by
+ allowing data visibility on a need-to-know basis. The platform is designed to support "both transaction-level privacy and
+ network-wide transparency" (<a href="https://www.jpmorgan.com/country/US/EN/Quorum">jpmorgan.com</a>). The network validates all smart contracts and overall system state through the involvement of all
+ running nodes. As with other permissioned ledgers, regulatory compliance is front and center in the Quorum platform.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-12-4" class="outline-4">
+<h4 id="sec-4-12-4"><span class="section-number-4">4.12.4</span> IOTA</h4>
+<div class="outline-text-4" id="text-4-12-4">
+<p>
+The cryptocurrency IOTA has been around since 2015. According to 
+<a href="https://medium.com/@MartinRosulek/how-iota-makes-future-for-internet-of-things-af14fd77d2a3">Martin Rosulek</a>, "It is the first cryptocurrency
+ that provides the whole ecosystem based on blockless blockchain" to enable machine-to-machine (M2M) transactions.
+</p>
+
+<p>
+IOTA, however, is more than just a cryptocurrency. Essentially, the platform entails a generalization of the blockchain protocol (the technology
+ called Tangle) that sits at the backend of the IOTA platform. 
+</p>
+
+<p>
+Instead of paying miners to validate the transactions, the architecture of the network involves peer-based validation. We can think
+ of a simple analogy, that of a teacher grading students' homework: the students are the clients/users in the Bitcoin
+ protocol, and the teacher is the miner/validator. Tangle technology asks students (users) to grade each other's homework, making the
+ need for a teacher (external validator) redundant, and avoiding expenses related to the teacher's/validator's work. This allows the platform
+ to be completely free of cost, without facing the scaling challenges that are inherent in the first generation of blockchains.
+</p>
+
+<p>
+Additionally, the use of the platform with connected devices or the Internet of Things
+</p>
+
+
+<blockquote>
+<p>
+"enables companies to explore new business-to-business models by making every technological resource a potential service to be traded on an open market in real time, with no fees".
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.forbes.com/sites/rogeraitken/2017/06/15/iotas-bitfinex-listing-surges-to-1-5b-record-breaking-crypto-capitalization-on-market-debut/#7e4170e275a5">Roger Aitken</a>, 2017
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-13" class="outline-3">
+<h3 id="sec-4-13"><span class="section-number-3">4.13</span> Challenges in the Adoption/Deployment of Distributed Ledger Technologies</h3>
+<div class="outline-text-3" id="text-4-13">
+<p>
+There are a number of challenges to the widespread use of permissioned distributed ledger technologies. Key among them are challenges
+ around the lack of standards, regulatory challenges, and the lack of knowledge about distributed ledger technologies. These challenges are inherent
+ to any new technological infrastructure that replaces an older infrastructure.
+</p>
+
+<p>
+We hope you go on to address some of these challenges and contribute to building a secure digital future!
+</p>
+</div>
+
+<div id="outline-container-sec-4-13-1" class="outline-4">
+<h4 id="sec-4-13-1"><span class="section-number-4">4.13.1</span> Standards</h4>
+<div class="outline-text-4" id="text-4-13-1">
+<p>
+Since we are still witnessing the early days of blockchain technology, there is no agreement on standards in the developer
+ and business community, as of yet. Standards are key in ensuring interoperability and avoiding risks associated with a fragmented ecosystem
+. Standards are critical not just for the distributed ledger itself, but also for supporting services, like identity, privacy, and data
+ governance. Furthermore, the management of keys, as well as protocols and standards around key loss and theft, will be critical
+ (<a href="https://www.bsigroup.com/PageFiles/508003/BSI_Blockchain_DLT_Web.pdf">Deshpande, Stewart, Lepetit, &amp; Gunashekar</a>, 2017).
+</p>
+
+
+<p>
+As a result, the International Organization for Standardization for Blockchain and Distributed Ledger Technologies was established in 2016 and has
+ defined areas for future standardization work (<a href="https://www.iso.org/news/Ref2188.htm">Clare Naden</a>, 2017). More about the ISO/TC 307 technical committee can be found
+ at <a href="https://www.iso.org/committee/6266604.html">https://www.iso.org/committee/6266604.html</a>.
+</p>
+
+
+
+
+<div id="fig:-STANDARDS_ROLE_IN_SUPPORTING_BLOCKCHAIN_AND_DLT" class="figure">
+<p><img src="img/STANDARDS_ROLE_IN_SUPPORTING_BLOCKCHAIN_AND_DLT.png" alt="STANDARDS_ROLE_IN_SUPPORTING_BLOCKCHAIN_AND_DLT.png" />
+</p>
+<p><span class="figure-number">Figure 9:</span> Standards Role In Supporting Blockchain And DLT</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-13-2" class="outline-4">
+<h4 id="sec-4-13-2"><span class="section-number-4">4.13.2</span> Regulation</h4>
+<div class="outline-text-4" id="text-4-13-2">
+<p>
+The lack of regulation around transactions on the blockchain creates an environment of uncertainty for all players. Highly regulated industries
+ like financial services are treading carefully in the DLT space. The Securities and Exchange Commission of the United States has
+ recently clarified its stance (<a href="https://www.sec.gov/oiea/investor-alerts-and-bulletins/ib_coinofferings">sec.gov</a>) on Initial Coin Offerings (ICOs). The Chinese government has, in fact, banned all ICOs
+, while 60 major ICO platforms are being investigated (<a href="https://www.cnbc.com/2017/09/04/chinese-icos-china-bans-fundraising-through-initial-coin-offerings-report-says.html">Saheli Roy Choudhury</a>, 2017).
+</p>
+
+<p>
+Similarly, there are no regulatory guidelines governing smart contracts, causing much anxiety among various players like lawyers, regulators, programmers, and
+ businesses. The lack of regulatory guidelines, along with a lack of industry standards, exacerbates hindrances to rapid adoption of DLT.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-13-3" class="outline-4">
+<h4 id="sec-4-13-3"><span class="section-number-4">4.13.3</span> Lack of Know-How</h4>
+<div class="outline-text-4" id="text-4-13-3">
+<p>
+The lack of know-how (and know-whom and know-where) around distributed ledger technologies and the availability of experts
+ in the area is a major challenge in the adoption of distributed ledger technologies. While there has been an exponential
+ increase in the interest around 'blockchain', as indicated in the figure below, there is a huge lag of technical talent
+ in the space. In fact, the origin of this course stems from the need to address this gap in know-how, both for the business and technical audiences.
+</p>
+
+
+
+
+
+<div id="fig:Blockchain_Search_Volume" class="figure">
+<p><img src="img/Blockchain_Search_Volume.jpg" alt="Blockchain_Search_Volume.jpg" />
+</p>
+<p><span class="figure-number">Figure 10:</span> Blockchain Search Volume</p>
+</div>
+
+<p>
+Source: <a href="https://coin.dance/stats/blockchain">https://coin.dance/stats/blockchain</a> Retrieved: October 9, 2017 (updated weekly)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-14" class="outline-3">
+<h3 id="sec-4-14"><span class="section-number-3">4.14</span> Conclusion</h3>
+<div class="outline-text-3" id="text-4-14">
+<p>
+For a new technology to realize its full potential, a lot of pieces need to exist before network effects can
+ be realized. Moreover, in order for the technology to bring in systemic efficiencies, a critical mass needs to be attained
+. As an infrastructure technology, all major players in the market need to collaborate to define standards in a democratic manner
+. The blockchain community is indeed witnessing unprecedented levels of industry collaboration between players who are otherwise competitors in the space
+. Because of the cost of moving from one infrastructure technology to the next, an open source collaborative approach is the
+ most promising way forward. As you will learn in Chapter 2, Introduction to Hyperledger, Hyperledger's mandate is to develop and
+ nurture this ecosystem to develop the future of business blockchain technologies.
+</p>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: yfe</p>
-<p class="date">Created: 2017-10-28 Sam 23:13</p>
+<p class="date">Created: 2017-10-28 Sam 23:47</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
