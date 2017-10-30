@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>notes</title>
-<!-- 2017-10-28 Sam 23:47 -->
+<!-- 2017-10-29 Dim 22:40 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="yfe" />
@@ -205,6 +205,37 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#sec-4-14">4.14. Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Chapter 2. Introduction to Hyperledger</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Introduction</a></li>
+<li><a href="#sec-5-2">5.2. Hyperledger</a>
+<ul>
+<li><a href="#sec-5-2-1">5.2.1. Hyperledger</a></li>
+<li><a href="#sec-5-2-2">5.2.2. Comparing Hyperledger with Bitcoin and Ethereum</a></li>
+<li><a href="#sec-5-2-3">5.2.3. Hyperledger Goals</a></li>
+<li><a href="#sec-5-2-4">5.2.4. Open Standards</a></li>
+<li><a href="#sec-5-2-5">5.2.5. Open Source and Open Governance</a></li>
+<li><a href="#sec-5-2-6">5.2.6. Blockchain for Business</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-3">5.3. Hyperledger Frameworks</a>
+<ul>
+<li><a href="#sec-5-3-1">5.3.1. Components of Hyperledger Frameworks</a></li>
+<li><a href="#sec-5-3-2">5.3.2. Hyperledger Iroha v0.95</a></li>
+<li><a href="#sec-5-3-3">5.3.3. Hyperledger Sawtooth v0.8</a></li>
+<li><a href="#sec-5-3-4">5.3.4. Hyperledger Fabric v1.0</a></li>
+<li><a href="#sec-5-3-5">5.3.5. Hyperledger Indy</a></li>
+<li><a href="#sec-5-3-6">5.3.6. Hyperledger Burrow v0.16.1</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-4">5.4. Hyperledger Modules</a>
+<ul>
+<li><a href="#sec-5-4-1">5.4.1. Hyperledger Modules</a></li>
+<li><a href="#sec-5-4-2">5.4.2. Hyperledger Cello</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1319,10 +1350,509 @@ For a new technology to realize its full potential, a lot of pieces need to exis
 </div>
 </div>
 </div>
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Chapter 2. Introduction to Hyperledger</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Introduction</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+This chapter provides an overview of Hyperledger, a collaborative project hosted by The Linux Foundation that is focused on business
+ blockchain technologies. It also introduces the current Hyperledger frameworks and modules, as of October 2017.
+</p>
+
+<p>
+By the end of this chapter you should be able to:
+</p>
+
+<ul class="org-ul">
+<li>Explain the differences between Hyperledger and permisionless blockchain technologies.
+</li>
+<li>Discuss how Hyperledger leverages open standards and open governance to support business solutions.
+</li>
+<li>Discuss Hyperledger frameworks (Iroha, Sawtooth, Fabric, Indy, and Burrow) and modules (Cello, Explorer, and Composer).
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Hyperledger</h3>
+<div class="outline-text-3" id="text-5-2">
+</div><div id="outline-container-sec-5-2-1" class="outline-4">
+<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Hyperledger</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+Hyperledger is a group of open source projects focused around cross-industry distributed ledger technologies. Hosted by The Linux Foundation
+, collaborators include industry leaders in technology, finance, banking, supply chain management, manufacturing, and IoT.
+</p>
+
+<p>
+As of October 2017, Hyperledger consists of eight projects, five of which are distributed ledger frameworks. The other three projects
+ are modules that support these frameworks.
+</p>
+
+
+<div id="fig:modular_umbrella" class="figure">
+<p><img src="img/modular_umbrella.jpg" alt="modular_umbrella.jpg" />
+</p>
+<p><span class="figure-number">Figure 11:</span> Hyperledger Modular Umbrella Approach</p>
+</div>
+
+<p>
+As <a href="https://www.hyperledger.org/blog/2017/09/12/3431">Arnaud Le Hors</a>, member of the Hyperledger Technical Steering Committee, emphasized,
+</p>
+
+<blockquote>
+<p>
+"these projects show how broadly applicable blockchain technology really is. This goes way beyond cryptocurrencies".
+</p>
+</blockquote>
+
+
+<p>
+<a href="https://www.hyperledger.org/about">Hyperledger</a> provides an alternative to the cryptocurrency-based blockchain model, and focuses on developing blockchain frameworks and modules to support
+ global enterprise solutions. The focus of Hyperledger is to provide a transparent and collaborative approach to blockchain development.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-2" class="outline-4">
+<h4 id="sec-5-2-2"><span class="section-number-4">5.2.2</span> Comparing Hyperledger with Bitcoin and Ethereum</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+The following table explores the differences between Hyperledger's permissioned distributed ledgers and the Bitcoin and Ethereum permissionless blockchains. If you
+ are considering blockchain solutions for your business requirements, it is important to pay attention to all these elements and weigh
+ in on those that are most important for your use case.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">Bitcoin</td>
+<td class="left">Ethereum</td>
+<td class="left">Hyperledger Frameworks</td>
+</tr>
+
+<tr>
+<td class="left">Cryptocurrency based</td>
+<td class="left">Yes</td>
+<td class="left">Yes</td>
+<td class="left">No</td>
+</tr>
+
+<tr>
+<td class="left">Permissioned</td>
+<td class="left">No</td>
+<td class="left">No</td>
+<td class="left">Yes(in general)*</td>
+</tr>
+
+<tr>
+<td class="left">Pseudo-anonymous</td>
+<td class="left">Yes</td>
+<td class="left">No</td>
+<td class="left">No</td>
+</tr>
+
+<tr>
+<td class="left">Auditable</td>
+<td class="left">Yes</td>
+<td class="left">Yes</td>
+<td class="left">Yes</td>
+</tr>
+
+<tr>
+<td class="left">Immutable ledger</td>
+<td class="left">Yes</td>
+<td class="left">Yes</td>
+<td class="left">Yes</td>
+</tr>
+
+<tr>
+<td class="left">Modularity</td>
+<td class="left">No</td>
+<td class="left">No</td>
+<td class="left">Yes</td>
+</tr>
+
+<tr>
+<td class="left">Smart contracts</td>
+<td class="left">No</td>
+<td class="left">Yes</td>
+<td class="left">Yes</td>
+</tr>
+
+<tr>
+<td class="left">Consensus protocol</td>
+<td class="left">PoW</td>
+<td class="left">PoW</td>
+<td class="left">Various**</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+*Sawtooth can be configured to be permissionless
+**Key Hyperledger consensus protocols are Apache Kafka in Hyperledger Fabric, PoET in Hyperledger Sawtooth, RBFT in Hyperledger Indy, Tendermint in
+ Hyperledger Burrow, and Yet Another Consensus (YAC) in Hyperledger Iroha. For more details, see the <a href="https://www.hyperledger.org/wp-content/uploads/2017/08/HyperLedger_Arch_WG_Paper_1_Consensus.pdf">Hyperledger Architecture, Volume 1 paper</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-3" class="outline-4">
+<h4 id="sec-5-2-3"><span class="section-number-4">5.2.3</span> Hyperledger Goals</h4>
+<div class="outline-text-4" id="text-5-2-3">
+<p>
+Hyperledger has taken a leadership role to develop cross-industry standards and provide a neutral space for software collaboration. The
+ financial services industry, in particular, is witnessing an unprecedented level of collaboration between institutions that have traditionally been competitors. The
+ advent of a new foundational or infrastructural technology like the blockchain - much like the Internet - requires collaboration of various actors
+ in order to realize the full benefits of the technology. Unless all actors use a certain standard, the pace of
+ technological dissemination will continue to be slow. Technological adoption is characterized by network effects, where the costs decrease with the
+ increase in use of a certain technology. Since shifting to distributed ledger technology involves significant costs, open source software, communities
+ and ecosystems that develop around these have a significant part to play.
+</p>
+
+
+<div id="fig:Hyperledger_Goals" class="figure">
+<p><img src="img/Hyperledger_Goals.jpg" alt="Hyperledger_Goals.jpg" />
+</p>
+<p><span class="figure-number">Figure 12:</span> Hyperledger Goals</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-4" class="outline-4">
+<h4 id="sec-5-2-4"><span class="section-number-4">5.2.4</span> Open Standards</h4>
+<div class="outline-text-4" id="text-5-2-4">
+<blockquote>
+<p>
+"Only an Open Source, collaborative software development approach can ensure the transparency, longevity, interoperability and support required to bring blockchain
+ technologies forward to mainstream commercial adoption. That is what Hyperledger is about - communities of software developers building blockchain frameworks and platforms."
+</p>
+
+
+<ul class="org-ul">
+<li><i>hyperledger.org </i>
+</li>
+</ul>
+</blockquote>
+
+
+<p>
+As we learned in Chapter 1: Discovering Blockchain Technologies, the non-availability of standards in distributed ledger technologies is one
+ of the major hurdles in scaling them. One of Hyperledger's key goals is to facilitate the process of standards formation
+, not by promoting its own distributed ledger(s), but by providing a space for a variety of standards to co-exist simultaneously:
+</p>
+
+<blockquote>
+<p>
+"Rather than declaring a single blockchain standard, it encourages a collaborative approach to developing blockchain technologies via a community process
+, with intellectual property rights that encourage open development and the adoption of key standards over time."
+</p>
+
+
+<ul class="org-ul">
+<li><a href="https://hyperledger-fabric.readthedocs.io/en/latest/">hyperledger-fabric.readthedocs.io </a>
+</li>
+</ul>
+</blockquote>
+
+<p>
+Hyperledger aims to adhere to '<b>open standards</b>', which means they are
+</p>
+
+<blockquote>
+<p>
+"(&#x2026;) interoperable through open published interfaces and services."
+</p>
+
+
+<ul class="org-ul">
+<li>John Palfreyman, <a href="https://www.ibm.com/blogs/insights-on-business/government/open-innovation-blockchain-hyperledger/">ibm.com</a>
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-5" class="outline-4">
+<h4 id="sec-5-2-5"><span class="section-number-4">5.2.5</span> Open Source and Open Governance</h4>
+<div class="outline-text-4" id="text-5-2-5">
+<blockquote>
+<p>
+"Today, most people understand the concept of <b>Open Source</b>. What many people don't get, and something we here at Hyperledger and The Linux Foundation pride ourselves on doing well, is <b>Open Governance</b>."
+</p>
+
+<ul class="org-ul">
+<li><a href="https://hyperledger.org/blog/2017/09/06/abcs-of-open-governance">hyperledger.org</a>
+</li>
+</ul>
+</blockquote>
+
+<p>
+Open source software is software that is made freely available and may be redistributed and modified. In other words, anyone
+ has the ability to view the code, use the code, copy the code, change the code, and, depending on the open source license, contribute back changes.
+</p>
+
+<p>
+Open governance means that technical decisions for an open source project are made by a group of community-elected developers
+ drawn from a pool of active participants. These decisions include things such as which features to add, how, and when to add them.
+</p>
+
+<p>
+Learn more about the specifics of Hyperledger's open governance at <a href="https://hyperledger.org/blog/2017/09/06/abcs-of-open-governance">https://hyperledger.org/blog/2017/09/06/abcs-of-open-governance</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2-6" class="outline-4">
+<h4 id="sec-5-2-6"><span class="section-number-4">5.2.6</span> Blockchain for Business</h4>
+<div class="outline-text-4" id="text-5-2-6">
+<p>
+The cryptocurrency-based blockchain model, popularized by public blockchains like Bitcoin and Ethereum, currently falls short of fulfilling a host
+ of requirements that many types of organizations would have to fulfill in order to be compliant when using blockchain and
+ distributed ledger technologies - for instance, in the areas of financial services, healthcare, and government.
+</p>
+
+<p>
+Hyperledger is a unique platform that is developing permissioned distributed ledger frameworks specifically designed for enterprises, including those in industries
+ with strong compliance requirements. Enterprise use cases require capabilities such as scalability and throughput, built-in or interoperable identity modules
+ for the parties involved in a transaction or a network, or even access to regulators who can access all data
+ in the ledger as read-only to ensure compliance. The latter is particularly important because, regardless of the innovation, it
+ has to operate within the current regulatory framework, as well as comply with any new rules that come into place specifically targeted at blockchain technologies.
+</p>
+
+<p>
+The enterprise continues to be at the heart of this course.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Hyperledger Frameworks</h3>
+<div class="outline-text-3" id="text-5-3">
+</div><div id="outline-container-sec-5-3-1" class="outline-4">
+<h4 id="sec-5-3-1"><span class="section-number-4">5.3.1</span> Components of Hyperledger Frameworks</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+Hyperledger business blockchain frameworks are used to build enterprise blockchains for a consortium of organizations. They are different than public
+ ledgers like the Bitcoin blockchain and Ethereum. The Hyperledger frameworks include:
+</p>
+
+
+<ul class="org-ul">
+<li>An append-only distributed <b>ledger</b>
+</li>
+<li>A <b>consensus algorithm</b> for agreeing to changes in the ledger
+</li>
+<li><b>Privacy</b> of transactions through permissioned access
+</li>
+<li><b>Smart contracts</b> to process transaction requests.
+</li>
+</ul>
+
+
+<div id="fig:Components_of_blockchain" class="figure">
+<p><img src="img/Components_of_blockchain.jpg" alt="Components_of_blockchain.jpg" />
+</p>
+<p><span class="figure-number">Figure 13:</span> Components of blockchain</p>
+</div>
+
+<p>
+Now, let's explore the five Hyperledger frameworks (as of October 2017)!
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3-2" class="outline-4">
+<h4 id="sec-5-3-2"><span class="section-number-4">5.3.2</span> Hyperledger Iroha v0.95</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<p>
+<a href="https://hyperledger.org/projects/iroha">Hyperledger Iroha</a> is a blockchain framework contributed by Soramitsu, Hitachi, NTT Data, and Colu. Hyperledger Iroha is designed to be
+ simple and easy to incorporate into infrastructure projects requiring distributed ledger technology. Hyperledger Iroha emphasizes mobile application development with client
+ libraries for Android and iOS, making it distinct from other Hyperledger frameworks. Inspired by Hyperledger Fabric, Hyperledger Iroha seeks to
+ complement Hyperledger Fabric and Hyperledger Sawtooth, while providing a development environment for C++ developers to contribute to Hyperledger.
+</p>
+
+<p>
+In conclusion, Hyperledger Iroha features a simple construction, modern, domain-driven C++ design, along with the consensus algorithm <a href="https://www.overleaf.com/read/wzhwjzbjvrzn#/40115559/">YAC</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3-3" class="outline-4">
+<h4 id="sec-5-3-3"><span class="section-number-4">5.3.3</span> Hyperledger Sawtooth v0.8</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<p>
+<a href="https://www.hyperledger.org/projects/sawtooth">Hyperledger Sawtooth</a>, contributed by Intel, is a blockchain framework that utilizes a modular platform for building, deploying, and running distributed
+ ledgers. Distributed ledger solutions built with Hyperledger Sawtooth can utilize various consensus algorithms based on the size of the network
+. By default, it uses the Proof of Elapsed Time (PoET) consensus algorithm, which provides the scalability of the Bitcoin blockchain
+ without the high energy consumption. PoET allows for a highly scalable network of validator nodes. Hyperledger Sawtooth is designed for
+ versatility, with support for both permissioned and permissionless deployments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3-4" class="outline-4">
+<h4 id="sec-5-3-4"><span class="section-number-4">5.3.4</span> Hyperledger Fabric v1.0</h4>
+<div class="outline-text-4" id="text-5-3-4">
+<p>
+<a href="https://www.hyperledger.org/projects/fabric">Hyperledger Fabric</a> was the first proposal for a codebase, combining previous work done by Digital Asset Holdings, Blockstream's libconsensus, and
+ IBM's OpenBlockchain. Hyperledger Fabric provides a modular architecture, which allows components such as consensus and membership services to be plug
+-and-play. Hyperledger Fabric is revolutionary in allowing entities to conduct confidential transactions without passing information through a central authority
+. This is accomplished through different channels that run within the network, as well as the division of labor that characterizes
+ the different nodes within the network. Lastly, it is important to remember that, unlike Bitcoin, which is a public chain
+, Hyperledger Fabric supports permissioned deployments.
+</p>
+
+<blockquote>
+<p>
+"If you have a large blockchain network and you want to share data with only certain parties, you can create a private channel with just those participants. It is the most distinctive thing about Fabric right now."
+</p>
+
+
+<ul class="org-ul">
+<li>Brian Behlendorf, Executive Director of Hyperledger, The Linux Foundation
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3-5" class="outline-4">
+<h4 id="sec-5-3-5"><span class="section-number-4">5.3.5</span> Hyperledger Indy</h4>
+<div class="outline-text-4" id="text-5-3-5">
+<p>
+<a href="https://www.hyperledger.org/projects">Hyperledger Indy</a> is a distributed ledger purpose-built for decentralized identity. Hyperledger Indy's goal is to achieve this by developing a set of
+</p>
+
+<p>
+"(&#x2026;) decentralized identity specs and artifacts that are independent of any particular ledger and will enable interoperability across any DLT that supports them."
+</p>
+
+<p>
+Contributed by the Sovrin Foundation, Hyperledger Indy allows individuals to manage and control their digital identities. Rather than having businesses
+ store huge amounts of personal data of individuals, Hyperledger Indy allows businesses to store pointers to identity. Once the company
+ verifies the other party's identity, it throws it away.
+</p>
+
+<p>
+According to Brian Behlendorf,
+</p>
+
+<blockquote>
+<p>
+"(&#x2026;) identity is a toxic asset that could present a liability to organizations."
+</p>
+</blockquote>
+
+<p>
+Indeed, since 2013, over 9 billion data records were lost or stolen. What is striking is that, out of these
+, only 4% were encrypted, and hence, rendered useless after being stolen (also called 'secure breaches'). You can find detailed statistics
+ at <a href="http://breachlevelindex.com/">http://breachlevelindex.com/</a>.
+</p>
+
+
+<p>
+One of the key principles of Hyperledger Indy is its '<a href="https://en.wikipedia.org/wiki/Privacy_by_design">Privacy by Design'</a> approach. Given the immutable nature of the
+ DLT, it is all the more important that digital identities be handled with the utmost care, keeping human values front and center.
+</p>
+
+<blockquote>
+<p>
+"Hyperledger Indy lets users authenticate identity based on the attributes they are willing to store and share themselves. This can
+ reduce the amount of liability contained within a business because the data can be kept with the user and presented
+ to you again in a way that you can trust and validate that what has been said really was said
+ and is trusted by the other parties you do business with."
+</p>
+
+
+<ul class="org-ul">
+<li>Nathan George, Maintainer, Hyperledger Indy
+</li>
+</ul>
+</blockquote>
+
+<p>
+Further information about the history of the project can be found at <a href="https://sovrin.org/">https://sovrin.org/</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-3-6" class="outline-4">
+<h4 id="sec-5-3-6"><span class="section-number-4">5.3.6</span> Hyperledger Burrow v0.16.1</h4>
+<div class="outline-text-4" id="text-5-3-6">
+<p>
+Formally known as eris-db, <a href="https://www.hyperledger.org/projects/hyperledger-burrow">Hyperledger Burrow</a> was released in December 2014. Currently under incubation, Hyperledger Burrow is a permissionable
+ smart contract machine that provides a modular blockchain client with a permissioned smart contract interpreter built- in part to the
+ specification of the Ethereum Virtual Machine (EVM). It is the only available Apache-licensed EVM implementation.
+</p>
+
+<p>
+Following are the major components of Burrow:
+</p>
+
+<ul class="org-ul">
+<li>The <b>Gateway</b> provides interfaces for systems integration and user interfaces
+</li>
+<li>The <b>Smart contract application engine</b> facilitates integration of complex business logic
+</li>
+<li>The <b>Consensus Engine</b> serves the dual purpose of:
+<ul class="org-ul">
+<li>a. Maintaining the networking stack between the nodes, and,
+</li>
+<li>b. Ordering transactions
+</li>
+</ul>
+</li>
+<li>The Application Blockchain Interface (ABCI) provides interface specification for the consensus engine and smart contract application engine to connect.
+</li>
+</ul>
+
+<p>
+You can learn more about Hyperledger Burrow at <a href="https://monax.io/platform/db/">https://monax.io/platform/db/</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> Hyperledger Modules</h3>
+<div class="outline-text-3" id="text-5-4">
+</div><div id="outline-container-sec-5-4-1" class="outline-4">
+<h4 id="sec-5-4-1"><span class="section-number-4">5.4.1</span> Hyperledger Modules</h4>
+<div class="outline-text-4" id="text-5-4-1">
+<p>
+The Hyperledger frameworks which we examined in the previous section are used to build blockchains and distributed ledgers. The Hyperledger
+ modules, which we will look at next, are auxiliary softwares used for things like deploying and maintaining blockchains, examining the
+ data on the ledgers, as well as tools to design, prototype, and extend blockchain networks.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-5-4-2" class="outline-4">
+<h4 id="sec-5-4-2"><span class="section-number-4">5.4.2</span> Hyperledger Cello</h4>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: yfe</p>
-<p class="date">Created: 2017-10-28 Sam 23:47</p>
+<p class="date">Created: 2017-10-29 Dim 22:40</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
