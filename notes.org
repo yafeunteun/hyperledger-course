@@ -934,6 +934,75 @@ The [[https://www.hyperledger.org/wp-content/uploads/2017/05/Hyperledger-Compose
 You can watch an introduction to Hyperledger Composer [[https://www.youtube.com/watch?v%3DcNvOQp8r0xo][here]].
 
 
+* Chapter 3. The Promise of Business Blockchain Technologies
+
+** Introduction 
+
+This chapter is designed to help people evaluate whether blockchain tech, including the Hyperledger frameworks, are right for their business.
+
+By the end of this chapter you should be able to:
+
+- Examine several use cases where blockchain technology is actively used to solve real world business problems.
+- Discover the factors to look at when evaluating if blockchain technology is right for a particular project.
+- Decide when to use and when not to use blockchain technology.
+
+**  Existing Blockchain Use Cases 
+
+*** Business Blockchain Technologies Overview
+
+Blockchain is a new data structure with an automated way to enforce trust among participants. Consensus algorithms ensure that all
+ participants agree on the data stored within the blockchain. Blockchain opens the door to disrupt any industry that relies on
+ a central authority to confirm authenticity. It also allows independent, and even competing organizations, to share information to gain efficiencies
+ across an industry.
+
+In permissioned blockchains, a consortium of organizations are responsible for authenticating and controlling the participants in a blockchain. In public
+ blockchains, no central authority or administration is required to exchange data. Blockchains can drive business innovation through controlled data-sharing
+ networks for industry consortiums.
+
+The promise of distributed ledger technologies (DLT) to simplify and automate key work functions has many industries taking notice. Businesses
+ recognize the efficiency gains from transitioning from closed and proprietary solutions to standard open source capabilities, such as Hyperledger business
+ blockchain technologies. Several common project features of blockchain applications are taking shape as the technology matures.
+
+How exactly are businesses using these emerging technologies today? Next, we will explore the state of distributed ledger technologies in
+ actual corporate settings, and how they compare against traditional tools.
+
+*** Supply Chain Management (Part I)
+
+Supply chain management is an important piece of enterprise resource planning (ERP). Supply chain management is the oversight of funds
+, raw materials, components, and finished products, as they move from suppliers, to manufacturers, to wholesalers, to retailers, to consumers. This
+ movement can occur both within one company, or among several companies. As assumptions change over time, the supply chain models
+ can begin to show weak performance metrics. Good supply chain management will keep product quality consistent, and also prevent either
+ understocking or overstocking of inventory.
+
+Stocking the right amount of inventory over time is also known as supply demand synchronization, and is the key component
+ in just-in-time lean manufacturing and distribution. Companies want to ensure that products are available when needed, but overstocking
+ inventory is costly. Companies that overstock perishable goods must discard items. Companies that overstock non-perishable goods cannot use the
+ money paid for those goods for other purposes until the inventory is used. Furthermore, if the price of a good
+ drops while a company is storing excess inventory, then the company will lose money.
+
+Currently, there are weak points in the supply chain management. These weak points occur where there are multiple ERP systems
+ in use across organizations. Data doesn't flow well through the handshakes or interface points between systems. These weak points usually
+ happen during transference of ownership, or change in status between two parties. Visibility is limited at the hand-off points
+ of funds, raw materials, components, or finished products. This lack of transparency is often intentional, as companies don't want to
+ expose their competitive advantages (e.g., an inexpensive supplier who delivers quality products on time). Additionally, a company could be
+ cut out of a supply chain if members start transacting directly with that company’s suppliers.
+
+*** Supply Chain Management (Part II)
+
+Blockchains are currently being used to solve problems in supply chain management by eliminating the need for a trusted third
+ party to certify raw materials, components, or finished products, as they travel through a supply chain. Every participant, or node
+, contains a copy of all transactions. This provides an audit trail of every transaction that has occurred in the system
+. A change would be validated or rejected by the nodes in the system. Because all participants have a copy of
+ all past transactions in the network, any participant can detect if a product is not as advertised. Instead of examining
+ raw materials, components, or finished products at several points in the supply chain, a record of the inspection would be
+ available and bound to the item as it flows through the supply chain. Although a record of the transaction is
+ public and tied to the movement of physical items across the network, specifics such as the quantity of goods, or
+ the identity of the parties transacting, can be done pseudo-anonymously in a blockchain. Such a granular view of movement
+ through supply chains improves resource allocation.
+
+
+
+
 
 
 
