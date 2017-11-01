@@ -948,6 +948,8 @@ By the end of this chapter you should be able to:
 
 **  Existing Blockchain Use Cases 
 
+
+
 *** Business Blockchain Technologies Overview
 
 Blockchain is a new data structure with an automated way to enforce trust among participants. Consensus algorithms ensure that all
@@ -1007,3 +1009,48 @@ Blockchains are currently being used to solve problems in supply chain managemen
 
 
 
+**  When to Use or Not to Use Blockchain Technologies 
+*** What Enterprises Look for When Evaluating Whether or Not to Use Hyperledger
+
+Start with the business needs trying to look at what are you doing in your enterprise, with your business partners,
+your suppliers, your customers, your competitors.
+
+What are some _business processes_, or some _provenance tracking problems_ or a _registry_ somewhere that you know you're 
+putting too much trust in a central org somewhere.
+
+Where is there an opportunity to take a decentralized ledger appropach and a smart contract approach to solving 
+those issues? 
+
+#+BEGIN_QUOTE
+*Start with the need*
+#+END_QUOTE
+
+
+One way to explore that is by using the industry consortium in that industry talking about technical standards,
+common business processes and _those are often the right kind of organizations to look at doing a proof of concept with_.
+Because they often have kind of this global point of view of the industry and they tend to be trusted by the participants in that industry. 
+So often, they could come up with what's right kind of proof of concept, or maybe even a Minimum Viable Product kind of project.
+
+You really need to think about an industry-wide kind of approach even from the earliest day.
+Once you've identified like that kind of opportunity, you should start to ask yourself what are the characteristics of the need.
+
+Is it from atransaction rate perspective, from a number of nodes, from a geographically distrubuted those nodes might be. 
+And then, also ask yourself who are the developers that I'm expecting to tap to bring this technology to bear and have they started 
+to investigate DLT. Have they started to learn how Fabric works, how Sawtooth works.
+
+#+BEGIN_QUOTE
+As your business side of the house is trying to understand the use cases, you should really let your technology teams explore this technlology.
+#+END_QUOTE
+
+Allow them to get their hands dirty, to go to a hackathon, to take this course, to start playing with these technologies to get 
+a more intuitive sense for what they do and what they can't do, what their limitations might be. 
+
+
+This is still very early days and you should still need to be smart about how do we apply these and how do we use them. 
+
+At some point, those two teams should meet up and say "Here is what I think is really the 
+MVP (Minimum Viable Product) or a proof of concept. And the other team say "Okay, we understand how to build this, 
+we can do something in a week". 
+
+And let's just see that, cheap and dirty, what it looks like. And then, over time, start to promulgate that amongst 
+the other partners that you think you'd involved in a distributed ledger project.
