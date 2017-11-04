@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>notes</title>
-<!-- 2017-11-04 Sat 13:59 -->
+<!-- 2017-11-04 Sat 20:27 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="yfe" />
@@ -259,6 +259,48 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#sec-6-4">6.4. Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Chapter 4. Introduction to Hyperledger Iroha</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Introduction &amp; Learning Objectives</a></li>
+<li><a href="#sec-7-2">7.2. Key Components</a>
+<ul>
+<li><a href="#sec-7-2-1">7.2.1. Hyperledger Iroha</a></li>
+<li><a href="#sec-7-2-2">7.2.2. Architecture Overview</a></li>
+<li><a href="#sec-7-2-3">7.2.3. Participants within the Network</a></li>
+<li><a href="#sec-7-2-4">7.2.4. Transaction Flow Basics (Part I)</a></li>
+<li><a href="#sec-7-2-5">7.2.5. Transaction Flow Basics (Part II)</a></li>
+<li><a href="#sec-7-2-6">7.2.6. YAC (Yet Another Consensus) - Consensus Functions</a></li>
+<li><a href="#sec-7-2-7">7.2.7. YAC - Steps to Successful Consensus</a></li>
+<li><a href="#sec-7-2-8">7.2.8. YAC - Failure to Reach Consensus</a></li>
+<li><a href="#sec-7-2-9">7.2.9. Mobile Libraries</a></li>
+<li><a href="#sec-7-2-10">7.2.10. Relationship to Hyperledger Fabric and Hyperledger Sawtooth</a></li>
+</ul>
+</li>
+<li><a href="#sec-7-3">7.3. Joining the Hyperledger Iroha Community</a>
+<ul>
+<li><a href="#sec-7-3-1">7.3.1. Joining the Hyperledger Iroha Community on GitHub</a></li>
+<li><a href="#sec-7-3-2">7.3.2. Joining the Hyperledger Iroha Community via Rocket.Chat and Mailing Lists</a></li>
+</ul>
+</li>
+<li><a href="#sec-7-4">7.4. Conclusions &amp; Learning Objectives (Review)</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. Chapter 6. Introduction to Hyperledger Sawtooth</a>
+<ul>
+<li><a href="#sec-8-1">8.1. Introduction &amp; Learning Objectives</a></li>
+<li><a href="#sec-8-2">8.2. Addressing Illegal, Unregulated, and Unreported Tuna Fishing (Demonstrated Scenario)</a>
+<ul>
+<li><a href="#sec-8-2-1">8.2.1. Defining Our Actors</a></li>
+<li><a href="#sec-8-2-2">8.2.2. Featured Hyperledger Sawtooth Elements</a></li>
+<li><a href="#sec-8-2-3">8.2.3. Why Sawtooth?</a></li>
+<li><a href="#sec-8-2-4">8.2.4. The Supply Chain</a></li>
+<li><a href="#sec-8-2-5">8.2.5. The Tuna Asset</a></li>
+<li><a href="#sec-8-2-6">8.2.6. Recording a Catch</a></li>
+<li><a href="#sec-8-2-7">8.2.7. Reaching Consensus</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -2334,10 +2376,567 @@ A number of business problems are being tackled with blockchain technology. It w
 </div>
 </div>
 </div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Chapter 4. Introduction to Hyperledger Iroha</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Introduction &amp; Learning Objectives</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+By the end of this chapter you should be able to:
+</p>
+
+<ul class="org-ul">
+<li>Understand the basics of Hyperledger Iroha v0.95.
+</li>
+<li>Discuss crucial components of the Hyperledger Iroha architecture, including the consensus algorithm YAC (Yet Another Consensus), peers, clients and the ledger block storage Ametsuchi.
+</li>
+<li>Join the Hyperledger Iroha framework discussion and development.
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Key Components</h3>
+<div class="outline-text-3" id="text-7-2">
+</div><div id="outline-container-sec-7-2-1" class="outline-4">
+<h4 id="sec-7-2-1"><span class="section-number-4">7.2.1</span> Hyperledger Iroha</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<p>
+Hyperledger Iroha is a blockchain framework, and one of the Hyperledger projects hosted by The Linux Foundation. Hyperledger Iroha was
+ initially contributed by Soramitsu, Hitachi, NTT Data, and Colu. Hyperledger Iroha is designed to be simple and easy to incorporate
+ into infrastructure projects requiring distributed ledger technology. Hyperledger Iroha features a simple construction, modern, domain-driven C++ design, emphasis on
+ mobile application development, and the YAC consensus algorithm.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2-2" class="outline-4">
+<h4 id="sec-7-2-2"><span class="section-number-4">7.2.2</span> Architecture Overview</h4>
+<div class="outline-text-4" id="text-7-2-2">
+<p>
+Before diving into the key components of Hyperledger Iroha, it is important to get an overarching look at this framework
+. The diagram below shows a layered architectural view of the different components that make up Hyperledger Iroha. The four layers
+ are: API, Peer Interaction, Chain Business Logic, and Storage.
+</p>
+
+
+
+<div id="fig:Iroha-architecture" class="figure">
+<p><img src="img/Iroha-architecture.png" alt="Iroha-architecture.png" />
+</p>
+<p><span class="figure-number">Figure 16:</span> Iroha Architecture</p>
+</div>
+
+<p>
+The components are:
+</p>
+
+<ul class="org-ul">
+<li><b>Model</b> classes are system entities.
+</li>
+<li><b>Torii</b> (gate) provides the input and output interfaces for clients. It is a single <a href="https://grpc.io/">gRPC</a> server that is used by clients to interact with peers through the network. The client's RPC call is non-blocking, making Torii an asynchronous server. Both commands (transactions) and queries (read access) are performed through this interface.
+</li>
+<li><b>Network</b> encompasses interaction with the network of peers.
+</li>
+<li><b>Consensus</b> is in charge of peers agreeing on chain content in the network. The consensus mechanism used by Iroha is YAC (Yet Another Consensus), which is a practical byzantine fault-tolerant algorithm based on voting for block hash.
+</li>
+<li><b>Simulator</b> generates a temporary snapshot of storage to validate transactions by executing them against this snapshot and forming a verified proposal, which consists only of valid transactions.
+</li>
+<li><b>Validator</b> classes check business rules and validity (correct format) of transactions or queries. There are two distinct types of validation that occur in Hyperledger Iroha:
+<ul class="org-ul">
+<li><b>Stateless validation</b> is a quicker form of validation, that performs schema and signature checks of the transaction.
+</li>
+<li><b>Stateful validation</b> is a slower form of validation, that checks the permissions and the current world state view, which is the latest and most actual state of the chain, to see if desired business rules and policies are possible. For example, does an account have enough funds to transfer?
+</li>
+</ul>
+</li>
+<li><b>Synchronizer</b> helps to synchronize new peers in the system or temporarily disconnected peers.
+</li>
+<li><b>Ametsuchi</b> is the ledger block storage which consists of a block index (currently Redis), block store (currently flat files), and a world state view component (currently PostgreSQL).
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2-3" class="outline-4">
+<h4 id="sec-7-2-3"><span class="section-number-4">7.2.3</span> Participants within the Network</h4>
+<div class="outline-text-4" id="text-7-2-3">
+<p>
+There are three main participants within a Hyperledger Iroha network:
+</p>
+
+<ul class="org-ul">
+<li><b>Clients</b> are able to:
+a. Query data that they have access/permission to
+b. Perform a state-changing action, 'transaction', which consists of atomic operations, called 'commands'. For example, in a single transaction, a user can transfer funds to three people (three separate commands). But, if he/she does not have enough funds to cover for all, the whole transaction will be rejected.
+</li>
+<li><b>Peers</b> maintain the current state and their own copy of the shared ledger. A peer is a single entity in the network, and has an address, identity, and trust. Hyperledger Iroha is designed so that a single peer may be a single computer or scaled for a cluster, meaning different computers are used for ledger storage, indices, validation, and peer-to-peer logic.
+</li>
+<li><b>Ordering service</b> orders transactions into a known order. There are a few options for the algorithm used by the ordering service. Kafka is considered a good candidate. It is important to mention that if Kafka, or any other distributed solution is used, that it be clustered; otherwise, this will result in a single point of failure.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2-4" class="outline-4">
+<h4 id="sec-7-2-4"><span class="section-number-4">7.2.4</span> Transaction Flow Basics (Part I)</h4>
+<div class="outline-text-4" id="text-7-2-4">
+<p>
+<b>Step 1</b>: A client creates and sends a transaction to the Torii gate, which routes the transaction to a peer that is responsible for performing stateless validation.
+</p>
+
+
+<div id="fig:Step_1_of_Iroha_Transaction_Flow" class="figure">
+<p><img src="img/Step_1_of_Iroha_Transaction_Flow.png" alt="Step_1_of_Iroha_Transaction_Flow.png" />
+</p>
+</div>
+
+<p>
+<b>Step 2</b>: After the peer performs stateless validation, the transaction is first sent to the ordering gate, which is responsible for choosing the right strategy of connection to the ordering service.
+</p>
+
+<div id="fig:Step_2_of_Iroha_Transaction_Flow" class="figure">
+<p><img src="img/Step_2_of_Iroha_Transaction_Flow.png" alt="Step_2_of_Iroha_Transaction_Flow.png" />
+</p>
+</div>
+
+
+<p>
+<b>Step 3</b>: The ordering service puts transactions into order and forwards them to peers in the consensus network in the
+ form of proposals. A proposal is an unsigned block shared by the ordering service, that contains a batch of ordered
+ transactions. Proposals are only forwarded when the ordering service has accumulated enough transactions, or a certain amount of time has
+ elapsed since the last proposal. This prevents the ordering service from sending empty proposals.
+</p>
+
+
+<div id="fig:Step_3_of_Iroha_Transaction_Flow" class="figure">
+<p><img src="img/Step_3_of_Iroha_Transaction_Flow.png" alt="Step_3_of_Iroha_Transaction_Flow.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2-5" class="outline-4">
+<h4 id="sec-7-2-5"><span class="section-number-4">7.2.5</span> Transaction Flow Basics (Part II)</h4>
+<div class="outline-text-4" id="text-7-2-5">
+<p>
+<b>Step 4</b>: Each peer verifies the proposal’s contents (stateful validation) in the Simulator and creates a block which consists
+ only of verified transactions. This block is then sent to the consensus gate which performs YAC consensus logic.
+</p>
+
+
+
+<div id="fig:Step_4_of_Iroha_transaction_flow" class="figure">
+<p><img src="img/Step_4_of_Iroha_transaction_flow.png" alt="Step_4_of_Iroha_transaction_flow.png" />
+</p>
+</div>
+
+<p>
+<b>Step 5</b>: An ordered list of peers is determined, and a leader is elected based on the YAC consensus logic. Each peer
+ casts a vote by signing and sending their proposed block to the leader.
+</p>
+
+
+<div id="fig:Step_5_of_Iroha_transaction_flow" class="figure">
+<p><img src="img/Step_5_of_Iroha_transaction_flow.png" alt="Step_5_of_Iroha_transaction_flow.png" />
+</p>
+</div>
+
+<p>
+<b>Step 6</b>: If the leader receives enough signed proposed blocks (i.e. more than two thirds of the peers), then
+ it starts to send a commit message, indicating that this block should be applied to the chain of each peer
+ participating in the consensus. Once the commit message has been sent, the proposed block becomes the next block in the
+ chain of every peer via the synchronizer.
+</p>
+
+
+<div id="fig:Step_6_of_Iroha_Transaction_flow" class="figure">
+<p><img src="img/Step_6_of_Iroha_Transaction_flow.png" alt="Step_6_of_Iroha_Transaction_flow.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2-6" class="outline-4">
+<h4 id="sec-7-2-6"><span class="section-number-4">7.2.6</span> YAC (Yet Another Consensus) - Consensus Functions</h4>
+<div class="outline-text-4" id="text-7-2-6">
+<p>
+Hyperledger Iroha currently implements a consensus algorithm called <b>YAC</b> (Yet Another Consensus), which is based on voting for block hash
+. Consensus involves taking blocks after they have been validated, collaborating with other blocks to decide on commit, and propagating commits
+ between peers. The YAC consensus performs two functions: ordering and consensus.
+</p>
+
+<p>
+Ordering is responsible for ordering all transactions, packaging them
+ into proposals, and sending them to peers in the network. The ordering service is an endpoint for setting an order
+ of transactions and their broadcast (in a form of proposal). Ordering is not responsible for performing stateful validation of transactions
+.
+</p>
+
+<p>
+<b>Note</b>: Currently, the ordering service is a single point of failure that does the ordering, and, therefore, Hyperledger Iroha is
+ neither crash fault-tolerant, nor byzantine fault-tolerant.
+</p>
+
+<p>
+Consensus is responsible for agreement on blocks based on the same proposal.
+</p>
+
+<p>
+Validation is an important part of the transaction flow, however it is separate from the consensus process.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-7-2-7" class="outline-4">
+<h4 id="sec-7-2-7"><span class="section-number-4">7.2.7</span> YAC - Steps to Successful Consensus</h4>
+<div class="outline-text-4" id="text-7-2-7">
+<ul class="org-ul">
+<li><b>Step 1</b>: The ordering service shares a proposal to all peers. A <b>proposal</b> is an unsigned block created and shared to peers in the network by the ordering service. It contains a batch of ordered transactions.
+</li>
+
+<li><b>Step 2</b>: Peers calculate the hash of a verified proposal and sign it. The resulting <b>&lt;Hash, Signature&gt;</b> tuple is called a vote.
+</li>
+
+<li><b>Step 3</b>: Based on the hashes created in the previous step, each peer computes an ordering list or order of peers. To do this, the ordering function will need to have knowledge of all the peers voting in the network, and is based on the hash of the proposed block. The first peer in the list is called the <b>leader</b>. The leader is responsible for collecting votes from other peers and sending the commit message.
+</li>
+
+<li><b>Step 4</b>: Each peer votes. The leader collects all the votes and determines the supermajority of votes for a certain hash. The leader sends a commit message that contains the votes of the committing block. This response is called a commit.
+</li>
+
+<li><b>Step 5</b>: After receiving the commit, the peers verify the commit and apply the block to the ledger. At this point, consensus is complete.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2-8" class="outline-4">
+<h4 id="sec-7-2-8"><span class="section-number-4">7.2.8</span> YAC - Failure to Reach Consensus</h4>
+<div class="outline-text-4" id="text-7-2-8">
+<p>
+We have just covered the steps needed to reach successful consensus, but there are also points in which failure may
+ occur. Next, we will cover a couple of the failure cases: broken leader and bad transactions from the ordering service.
+</p>
+
+<p>
+In the case of a broken leader, the leader may act unfairly in the collection of votes, or it takes
+ the leader too long to respond with a commit. In such situations, other peers set a time for receiving a
+ commit message from the leader. If the timer expires, the next peer in the order list becomes the new leader.
+</p>
+
+<p>
+In the case of bad transactions from the ordering service, the ordering service may forward transactions that do not pass
+ stateless validation. To rectify this, peers should remove those transactions from the proposal, and further compute the hash from the
+ rest of the transactions in the proposal.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2-9" class="outline-4">
+<h4 id="sec-7-2-9"><span class="section-number-4">7.2.9</span> Mobile Libraries</h4>
+<div class="outline-text-4" id="text-7-2-9">
+<p>
+One of the most defining characteristics of Hyperledger Iroha is its focus on providing mobile libraries.
+</p>
+
+<p>
+A major goal with Hyperledger Iroha is creating a distributed ledger system that can be easily utilized by applications. In
+ order to accomplish this, Hyperledger Iroha offers open source software libraries for iOS, Android, and Javascript. These libraries allow for
+ simple compatibility with not only Hyperledger Iroha, but also, potentially, with other networks through flexible API functions.
+</p>
+
+<p>
+If you would like to take a look, these libraries are all open source, and available on Github:
+</p>
+
+
+<ul class="org-ul">
+<li>Android: <a href="https://github.com/hyperledger/iroha-android">https://github.com/hyperledger/iroha-android</a>
+</li>
+<li>iOS: <a href="https://github.com/hyperledger/iroha-ios">https://github.com/hyperledger/iroha-ios</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2-10" class="outline-4">
+<h4 id="sec-7-2-10"><span class="section-number-4">7.2.10</span> Relationship to Hyperledger Fabric and Hyperledger Sawtooth</h4>
+<div class="outline-text-4" id="text-7-2-10">
+<p>
+One of the main goals at Hyperledger in the future is to have less disjointed projects, and more libraries that
+ can be used together as components. With that vision in mind, Hyperledger Iroha wants to eventually provide the following C++ components
+ that can be used by other Hyperledger projects:
+</p>
+
+<ul class="org-ul">
+<li>YAC consensus library
+</li>
+<li>Ed25519 digital signature library
+</li>
+<li>SHA-3 hashing library
+</li>
+<li>Iroha transaction serialization library
+</li>
+<li>P2P communication library
+</li>
+<li>iOS library
+</li>
+<li>Android library
+</li>
+<li>JavaScript library
+</li>
+<li>Blockchain explorer/data visualization suite
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Joining the Hyperledger Iroha Community</h3>
+<div class="outline-text-3" id="text-7-3">
+</div><div id="outline-container-sec-7-3-1" class="outline-4">
+<h4 id="sec-7-3-1"><span class="section-number-4">7.3.1</span> Joining the Hyperledger Iroha Community on GitHub</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<p>
+Hyperledger Iroha is an open source project where ideas and code can be publicly discussed, created, and reviewed. There are
+ many ways to join the Hyperledger Iroha community, and we will share with you some of the ways to get
+ involved, either from a technical standpoint, or from an ideas/issues creation perspective.
+</p>
+
+<p>
+You can get involved with the Hyperledger Iroha community on GitHub. All code available on GitHub is forkable and viewable:
+</p>
+
+
+<ul class="org-ul">
+<li><a href="https://github.com/hyperledger/iroha">https://github.com/hyperledger/iroha</a>
+</li>
+<li><a href="https://github.com/hyperledger/iroha-ios">https://github.com/hyperledger/iroha-ios</a>
+</li>
+<li><a href="https://github.com/hyperledger/iroha-android">https://github.com/hyperledger/iroha-android</a>
+</li>
+<li><a href="https://github.com/hyperledger/iroha-javascript">https://github.com/hyperledger/iroha-javascript</a>
+</li>
+<li><a href="https://github.com/hyperledger/iroha-python">https://github.com/hyperledger/iroha-python</a>
+</li>
+<li><a href="https://github.com/hyperledger/iroha-scala">https://github.com/hyperledger/iroha-scala</a>
+</li>
+<li><a href="https://github.com/hyperledger/iroha-dotnet">https://github.com/hyperledger/iroha-dotnet</a>
+</li>
+<li><a href="https://github.com/hyperledger/iroha-api">https://github.com/hyperledger/iroha-api</a>.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-3-2" class="outline-4">
+<h4 id="sec-7-3-2"><span class="section-number-4">7.3.2</span> Joining the Hyperledger Iroha Community via Rocket.Chat and Mailing Lists</h4>
+<div class="outline-text-4" id="text-7-3-2">
+<p>
+You can join the live conversations on Rocket.Chat (which is an alternative to Slack), using your Linux Foundation ID:
+</p>
+
+
+<ul class="org-ul">
+<li><a href="https://chat.hyperledger.org/channel/iroha">https://chat.hyperledger.org/channel/iroha</a>
+</li>
+<li><a href="https://chat.hyperledger.org/channel/iroha-smartcontracts">https://chat.hyperledger.org/channel/iroha-smartcontracts</a>
+</li>
+</ul>
+
+<p>
+Another option is to join the mailing list(s) for technical discussions and announcements: <a href="https://lists.hyperledger.org/mailman/listinfo/hyperledger-iroha">https://lists.hyperledger.org/mailman/listinfo/hyperledger-iroha</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Conclusions &amp; Learning Objectives (Review)</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+You should now be able to:
+</p>
+
+<ul class="org-ul">
+<li>Understand the basics of Hyperledger Iroha v0.95.
+</li>
+<li>Discuss crucial components of the Hyperledger Iroha architecture, including the consensus algorithm YAC (Yet Another Consensus), peers, clients and the ledger block storage Ametsuchi.
+</li>
+<li>Join the Hyperledger Iroha framework discussion and development.
+</li>
+</ul>
+
+<p>
+The Hyperledger Iroha team has been actively working on creating API documents. If you are interested in taking a look and testing for yourself, you can visit <a href="https://hyperledger.github.io/iroha-api/#overview">https://hyperledger.github.io/iroha-api/#overview</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Chapter 6. Introduction to Hyperledger Sawtooth</h2>
+<div class="outline-text-2" id="text-8">
+</div><div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> Introduction &amp; Learning Objectives</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+By the end of this chapter you should be able to:
+</p>
+
+<ul class="org-ul">
+<li>Understand the basics of Hyperledger Sawtooth v0.8.
+</li>
+<li>Walk through a demonstrated scenario highlighting aspects of Hyperledger Sawtooth.
+</li>
+<li>Discuss crucial components of Hyperledger Sawtooth, including the consensus algorithm Proof of Elapsed Time, transaction families, batches, and validators.
+</li>
+<li>Set up a running Hyperledger Sawtooth network and test an application.
+</li>
+<li>Get involved in the framework discussion and development.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> Addressing Illegal, Unregulated, and Unreported Tuna Fishing (Demonstrated Scenario)</h3>
+<div class="outline-text-3" id="text-8-2">
+</div><div id="outline-container-sec-8-2-1" class="outline-4">
+<h4 id="sec-8-2-1"><span class="section-number-4">8.2.1</span> Defining Our Actors</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<ul class="org-ul">
+<li>Sarah is the fisherman who sustainably and legally catches tuna.
+</li>
+<li>Tuna processing plant processes and bags the tuna after they have been caught.
+</li>
+<li>Regulators verify that the tuna has been legally and sustainably caught.
+</li>
+<li>Miriam is a restaurant owner who will serve as the recipient in this situation.
+</li>
+</ul>
+
+<p>
+We will be describing how tuna fishing can be improved starting from the source, fisherman Sarah, and the process by which her tuna ends up at Miriam's restaurant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2-2" class="outline-4">
+<h4 id="sec-8-2-2"><span class="section-number-4">8.2.2</span> Featured Hyperledger Sawtooth Elements</h4>
+<div class="outline-text-4" id="text-8-2-2">
+<p>
+<b>Transaction validators</b> validate transactions.
+</p>
+
+<p>
+<b>Transaction families</b> are smart contracts in Hyperledger Sawtooth. They define the operations that can be applied to transactions. Transaction families consist of both transaction processors (the server-side logic) and clients (for use from Web or mobile applications).
+</p>
+
+<p>
+<b>Transaction processor</b> is the server-side business logic of transaction families that acts upon network assets.
+</p>
+
+<p>
+<b>Transaction batches</b> are clusters of transactions that are either all committed to state or are all not committed to state.
+</p>
+
+<p>
+<b>The network layer</b> is responsible for communicating between validators in a Hyperledger Sawtooth network, including performing initial connectivity, peer discovery, and message handling.
+</p>
+
+<p>
+<b>Global state</b> contains the current state of the ledger and a chain of transaction invocations. The state for all transaction families is represented on each validator. The process of block validation on each validator ensures that the same transactions result in the same state transitions, and that the resulting data is the same for all participants in the network. The state is split into namespaces, which allow flexibility for transaction family authors to define, share, and reuse global state data between transaction processors.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2-3" class="outline-4">
+<h4 id="sec-8-2-3"><span class="section-number-4">8.2.3</span> Why Sawtooth?</h4>
+<div class="outline-text-4" id="text-8-2-3">
+<p>
+Miriam is a restaurant owner looking to source high quality tuna, that have been caught responsibly. Whenever Miriam buys tuna
+, she cannot be sure whether she can trust that the tuna she is purchasing is legally and sustainably caught, given
+ the prominence of illegal and unreported tuna fishing. Luckily, Hyperledger Sawtooth can help!
+</p>
+
+<p>
+Hyperledger Sawtooth is ideal for this scenario because of its ability to track an asset's (in this case tuna) provenance
+ and journey. The ability to batch transactions together allows for all tuna within a catch to be entered as a
+ whole. The distributed state agreement, novel consensus algorithm, and decoupled business logic from the consensus layer allow Miriam to be
+ confident that she is buying tuna that has been legally caught.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2-4" class="outline-4">
+<h4 id="sec-8-2-4"><span class="section-number-4">8.2.4</span> The Supply Chain</h4>
+<div class="outline-text-4" id="text-8-2-4">
+<p>
+Hyperledger Sawtooth is extremely scalable and able to withstand high throughput of data, which makes it a great option for production supply chain scenarios.
+</p>
+
+<p>
+We will start with Sarah, our licensed tuna fisher, who sells her tuna to multiple restaurants. Sarah operates as a
+ private business, in which her company frequently makes international deals. Through an application, Sarah is able to gain entry to
+ a Hyperledger Sawtooth blockchain network comprised of other fishermen, as well as processing plants, regulators, and restaurant owners. Sarah, as
+  well as the processing plants, have the ability to add and update information to this ledger as tuna passes through
+ the supply chain, while regulators and restaurants have read access to ledger records.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2-5" class="outline-4">
+<h4 id="sec-8-2-5"><span class="section-number-4">8.2.5</span> The Tuna Asset</h4>
+<div class="outline-text-4" id="text-8-2-5">
+<p>
+With each catch, Sarah records some information about each individual tuna, including: a unique ID number, the location and time
+ of the catch, its weight, and who caught the fish. For the sake of simplicity, we will stick with these
+ data attributes. However, in an actual application, many more details would be recorded, from toxicology, to other physical characteristics, such
+ as the temperature of the tuna.
+</p>
+
+<p>
+These details are saved in the global state as a <b>key/value</b> pair based on the specifications of a <b>transaction family</b>, while
+ the <b>transaction processor</b> allows Sarah's application to effectively create a transaction on the ledger. Please see the example
+ below:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-js">$ var tuna = { id: ‘0002’, holder: ‘Sarah’, location: { latitude: '15.623036831528264', longitude: '-158.466796875'}, when: '20170635123546', weight: ‘58lbs’ }
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2-6" class="outline-4">
+<h4 id="sec-8-2-6"><span class="section-number-4">8.2.6</span> Recording a Catch</h4>
+<div class="outline-text-4" id="text-8-2-6">
+<p>
+After Sarah catches her tuna and records data for each tuna, she is able to treat a haul of tuna
+ as a single batch of transactions. As a reminder, transaction batches are clusters of transactions that are committed to state
+ together. Using batches, Sarah is able to record many tuna together, while still being able to specify data for each
+ tuna. If one of the tuna transactions is invalid, the entire shipment is invalidated, that is, no tuna within the batch of tuna is validated.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-2-7" class="outline-4">
+<h4 id="sec-8-2-7"><span class="section-number-4">8.2.7</span> Reaching Consensus</h4>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: yfe</p>
-<p class="date">Created: 2017-11-04 Sat 13:59</p>
+<p class="date">Created: 2017-11-04 Sat 20:27</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
